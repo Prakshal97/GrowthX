@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Cpu, ChevronRight, Menu, X, Sparkles, Layers, Briefcase, ArrowUpRight } from 'lucide-react';
+import { Sparkles, Menu, X, ArrowUpRight } from 'lucide-react';
+import logoImg from '../assets/growthx-logo.png';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -39,18 +40,14 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Logo */}
+          {/* GrowthX Official Brand Logo */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-orange to-orange-400 flex items-center justify-center text-white shadow-md shadow-brand-orange/20 group-hover:scale-105 transition-transform duration-300">
-              <span className="font-heading font-bold text-xl tracking-tight">G</span>
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-bold text-xl tracking-tight text-brand-dark flex items-center gap-1">
-                Growth<span className="text-brand-orange">X</span>
-              </span>
-              <span className="text-[10px] uppercase font-semibold text-brand-muted tracking-widest -mt-1">
-                AI-First Tech
-              </span>
+            <div className="bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800 shadow-md group-hover:border-brand-orange/50 transition-all duration-300 flex items-center">
+              <img
+                src={logoImg}
+                alt="GrowthX Logo"
+                className="h-7 sm:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
             </div>
           </a>
 

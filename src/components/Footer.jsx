@@ -1,5 +1,6 @@
 import React from 'react';
-import { ArrowUp, Sparkles, Bot, Layers, Globe } from 'lucide-react';
+import { ArrowUp, Bot, Layers } from 'lucide-react';
+import logoImg from '../assets/growthx-logo.png';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -15,14 +16,15 @@ export default function Footer() {
           
           {/* Brand Info */}
           <div className="md:col-span-4 space-y-4">
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-brand-orange flex items-center justify-center text-white font-heading font-bold text-xl shadow-md shadow-brand-orange/30">
-                G
+            <a href="#" className="inline-block group">
+              <div className="bg-slate-900 px-3.5 py-2 rounded-xl border border-slate-800 inline-flex items-center group-hover:border-brand-orange/50 transition-all">
+                <img
+                  src={logoImg}
+                  alt="GrowthX Logo"
+                  className="h-8 sm:h-9 w-auto object-contain"
+                />
               </div>
-              <span className="font-heading font-bold text-2xl tracking-tight text-white">
-                Growth<span className="text-brand-orange">X</span>
-              </span>
-            </div>
+            </a>
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm">
               Building the Future of AI-Powered Businesses. An AI-first technology company creating intelligent operating systems and digital solutions.
