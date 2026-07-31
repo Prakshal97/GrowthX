@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Menu, X, ArrowUpRight } from 'lucide-react';
-import logoSvg from '../assets/growthx-logo.svg';
+import logoSvg from '../assets/ChatGPT Image Jul 31, 2026, 11_31_20 PM.svg';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -40,13 +40,15 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* GrowthX Official Cropped SVG Brand Logo */}
-          <a href="#" className="flex items-center group py-1">
-            <img
-              src={logoSvg}
-              alt="GrowthX Logo"
-              className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-            />
+          {/* GrowthX Official SVG Brand Logo */}
+          <a href="#" className="flex items-center group">
+            <div className="bg-black px-3.5 py-1.5 rounded-xl border border-slate-800 shadow-md group-hover:border-brand-orange/50 transition-all duration-300 flex items-center justify-center overflow-hidden">
+              <img
+                src={logoSvg}
+                alt="GrowthX Logo"
+                className="h-10 sm:h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+              />
+            </div>
           </a>
 
           {/* Desktop Nav Links */}
