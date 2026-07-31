@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Menu, X, ArrowUpRight } from 'lucide-react';
-import logoImg from '../assets/growthx-logo.png';
+import GrowthXLogo from './GrowthXLogo';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -34,30 +34,24 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
           ? 'glass-panel py-3 shadow-sm border-b border-gray-200/80'
-          : 'bg-transparent py-5'
+          : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* GrowthX Official Brand Logo */}
-          <a href="#" className="flex items-center gap-3 group">
-            <div className="bg-slate-950 px-3 py-1.5 rounded-xl border border-slate-800 shadow-md group-hover:border-brand-orange/50 transition-all duration-300 flex items-center">
-              <img
-                src={logoImg}
-                alt="GrowthX Logo"
-                className="h-7 sm:h-8 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-              />
-            </div>
+          {/* GrowthX Official Logo */}
+          <a href="#" className="group flex items-center">
+            <GrowthXLogo variant="light" />
           </a>
 
           {/* Desktop Nav Links */}
-          <nav className="hidden lg:flex items-center gap-1 bg-gray-100/60 p-1.5 rounded-full border border-gray-200/60 backdrop-blur-md">
+          <nav className="hidden lg:flex items-center gap-1 bg-gray-100/70 p-1.5 rounded-full border border-gray-200/70 backdrop-blur-md">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className="px-4 py-1.5 text-sm font-medium text-gray-600 hover:text-brand-orange rounded-full hover:bg-white/80 transition-all duration-200"
+                className="px-4 py-1.5 text-sm font-medium text-gray-700 hover:text-brand-orange rounded-full hover:bg-white transition-all duration-200"
               >
                 {link.name}
               </a>
