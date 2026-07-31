@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sparkles, Menu, X, ArrowUpRight } from 'lucide-react';
-import GrowthXLogo from './GrowthXLogo';
+import logoSvg from '../assets/growthx-logo.svg';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -33,16 +33,20 @@ export default function Navbar() {
       transition={{ duration: 0.5, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'glass-panel py-3 shadow-sm border-b border-gray-200/80'
+          ? 'glass-panel py-2.5 shadow-sm border-b border-gray-200/80'
           : 'bg-transparent py-4'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* GrowthX Official Logo */}
-          <a href="#" className="group flex items-center">
-            <GrowthXLogo variant="light" />
+          {/* GrowthX Official SVG Brand Logo */}
+          <a href="#" className="flex items-center group">
+            <img
+              src={logoSvg}
+              alt="GrowthX Logo"
+              className="h-9 sm:h-10 md:h-11 w-auto object-contain rounded-xl transition-transform duration-300 group-hover:scale-105"
+            />
           </a>
 
           {/* Desktop Nav Links */}

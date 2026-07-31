@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUp, Bot, Layers } from 'lucide-react';
-import GrowthXLogo from './GrowthXLogo';
+import logoSvg from '../assets/growthx-logo.svg';
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -17,7 +17,11 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="md:col-span-4 space-y-4">
             <a href="#" className="inline-block group">
-              <GrowthXLogo variant="dark" showTagline={true} />
+              <img
+                src={logoSvg}
+                alt="GrowthX Logo"
+                className="h-10 sm:h-12 w-auto object-contain rounded-xl transition-transform duration-300 group-hover:scale-105"
+              />
             </a>
 
             <p className="text-sm text-slate-400 leading-relaxed max-w-sm pt-2">
