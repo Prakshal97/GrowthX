@@ -20,7 +20,7 @@ export default function Footer() {
               <img
                 src={logoSvg}
                 alt="GrowthX Logo"
-                className="h-10 sm:h-12 w-auto object-contain rounded-xl transition-transform duration-300 group-hover:scale-105"
+                className="h-12 sm:h-16 md:h-18 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
               />
             </a>
 
